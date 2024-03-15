@@ -1,6 +1,16 @@
+import "./styling.css"
+import recipedata from "./recipe.json"
 function AuthorInfo() {
-   return;
- }
+  let authorName = recipedata[0].name;
+  let authorImage = recipedata[0].authorImage;
+  let authorSite = recipedata[0].website;
+   return(
+   <div>
+    <img src={authorImage} className="authorImage"></img>
+    <h2>{authorName}</h2>
+    <a href={authorSite}>Author's site</a>
+   </div>
+) }
  
  export default AuthorInfo;
  
